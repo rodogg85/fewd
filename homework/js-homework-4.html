@@ -1,0 +1,42 @@
+<script charset="utf-8">
+
+  function longestSide(a,b) {
+    parseFloat(a, b);
+    var result = Math.sqrt((a * a) + (b * b))
+    return result;
+    }
+
+    var whatIsA = prompt("What is a?");
+    var whatIsB = prompt("What is b?");
+    var longestSideC = longestSide(whatIsA, whatIsB);
+    alert("The longest side is " + longestSideC)
+
+  function circumference(radius) {
+    var result = 2 * Math.PI * radius
+    return result;
+    }
+
+    alert("Radius of a circle: 2 * pi * r")
+    var whatIsRadius = prompt("What is the radius");
+    var circum = circumference(whatIsRadius);
+    alert("The circumference is " + circum)
+
+  function cTemperature(f) {
+    var result = Math.round((f - 32) * (5/9))
+    return result;
+    }
+
+    var whatIsF = prompt("What's the temp outside in F");
+    var celcius = cTemperature(whatIsF);
+    alert("In C, that's " + celcius)
+
+  function inCentimeters(i) {
+    var result = Math.round(i/0.39370)
+    return result;
+    }
+
+    var whatIsI = prompt("How tall are you in inches?");
+    var cents = inCentimeters(whatIsI);
+    alert("In centimeters, that's " + cents)
+
+</script>
