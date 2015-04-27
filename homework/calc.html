@@ -1,0 +1,94 @@
+<style>
+body { font-size: 20px; font-family: sans-serif; }
+
+td { width: 100px; text-align: center; }
+.placeholder, button { width: 100%; }
+.placeholder { height: 23px; border: 1px solid #bababa; border-radius: 3px; }
+button { cursor: pointer; border: 1px solid #58c0f5; color: #58c0f5; background-color: white; font: inherit; }
+button { background-color: #58c0f5; color: white; border-radius: 3px; }
+</style>
+
+<table>
+  <tr>
+    <td>
+      <div id="first-operand" class="placeholder" contenteditable></div>
+    </td>
+    <td>
+      <div id="second-operand" class="placeholder" contenteditable></div>
+    </td>
+    <td>
+      =
+    </td>
+    <td>
+      <div id="result" class="placeholder"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button id="add-button" class="inverted-button">+</button>
+    </td>
+    <td>
+      <button id="subtract-button" class="inverted-button">-</button>
+    </td>
+    <td>
+      <button id="multiply-button" class="inverted-button">*</button>
+    </td>
+    <td>
+      <button id="divide-button" class="inverted-button">/</button>
+    </td>
+  </tr>
+</table>
+
+<script>
+
+var addition = document.querySelector("#add-button");
+var subtraction = document.querySelector("#subtract-button");
+var multiplication = document.querySelector("#multiply-button");
+var division = document.querySelector("#divide-button");
+var num1 = document.querySelector("#first-operand");
+var num2 = document.querySelector("#second-operand");
+var answer = document.querySelector("#result")
+
+
+function addButton(clickEvent) {
+
+  a = num1.textContent;
+  b = num2.textContent;
+
+  answer.textContent = parseInt(a) + parseInt(b);
+}
+
+addition.addEventListener("click", addButton);
+
+function subtractButton(clickEvent) {
+
+  a = num1.textContent;
+  b = num2.textContent;
+
+  answer.textContent = parseInt(a) - parseInt(b);
+}
+
+subtraction.addEventListener("click", subtractButton);
+
+function multiplyButton(clickEvent) {
+
+  a = num1.textContent;
+  b = num2.textContent;
+
+  answer.textContent = parseInt(a) * parseInt(b);
+}
+
+multiplication.addEventListener("click", multiplyButton);
+
+function divideButton(clickEvent) {
+
+  a = num1.textContent;
+  b = num2.textContent;
+
+  answer.textContent = parseInt(a) / parseInt(b);
+}
+
+division.addEventListener("click", divideButton);
+
+
+</script>
