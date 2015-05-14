@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>my blog</title>
+
+  <style media="screen">
+  main{
+    margin: 50px auto 0;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px silver;
+    border: 1px solid silver;
+    max-width: 660px;
+  }
+  p.counter{
+    display: inline;
+  }
+  div {
+    margin: 10px auto 0;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px silver;
+    border: 1px solid silver;
+    max-width: 660px;
+  }
+  button {
+    margin: 10px auto 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom-width: 2px;
+    border-radius: 5px; font-size: inherit;
+    color: white;
+    background-color: #049cd8;
+    padding: .5em 1em;
+    cursor: pointer;
+  }
+
+  </style>
+  </head>
+  <body>
+    <main>
+
+
+    <h1>Here is my wonderful blog!</h1>
+    <p>
+      Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
+    </p>
+    <ul>
+      <li>lorem</li>
+      <li>ipsum</li>
+      <li>dolor</li>
+    </ul>
+    <p>
+      Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+    </p>
+    <hr>
+    <a class = "like" href="#">like</a>
+    <p class = "counter">
+      (0)
+    </p>
+    <div class = "comment" contenteditable="true" placeholder="My Placeholder String">
+
+    </div>
+
+    <button id="comment">Add a Comment</button>
+  </main>
+
+  <script type="text/javascript">
+
+    var like = document.querySelector(".like");
+    var comment = document.querySelector("#comment");
+
+    function addALike(event) {
+
+      var likeCounter = document.querySelector("p.counter");
+      var count = 0;
+      count ++;
+      var answer = prompt("what's your username?");
+      if (answer != "" && answer != null) {
+        likeCounter.textContent = '('+count+')';
+        }
+
+      }
+
+    like.addEventListener("click", addALike);
+
+    var newDiv = document.querySelector("div");
+
+    function addAComment(event) {
+      var commentEntered = document.querySelector(".comment").value;
+      var newComment = document.createElement("div");
+      var answer = prompt("what's your username?");
+      if (answer != "") {
+        newComment.setAttribute("class", "comment");
+        newComment.textContent = commentEntered
+        newDiv.appendChild(newComment);
+      }
+    }
+
+    document.querySelector("#comment").addEventListener("click", addAComment);
+
+  </script>
+  </body>
+</html>
