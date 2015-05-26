@@ -1,0 +1,42 @@
+
+}
+body {
+  margin: 0;
+}
+
+.colorful {
+  background:
+    -webkit-linear-gradient(45deg, hsla(219, 92%, 49%, 1) 0%, hsla(219, 92%, 49%, 0) 70%),
+    -webkit-linear-gradient(315deg, hsla(315, 93%, 41%, 1) 10%, hsla(315, 93%, 41%, 0) 80%),
+    -webkit-linear-gradient(225deg, hsla(198, 95%, 48%, 1) 10%, hsla(198, 95%, 48%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(355, 98%, 48%, 1) 100%, hsla(355, 98%, 48%, 0) 70%);
+  background:
+    linear-gradient(45deg, hsla(219, 92%, 49%, 1) 0%, hsla(219, 92%, 49%, 0) 70%),
+    linear-gradient(135deg, hsla(315, 93%, 41%, 1) 10%, hsla(315, 93%, 41%, 0) 80%),
+    linear-gradient(225deg, hsla(198, 95%, 48%, 1) 10%, hsla(198, 95%, 48%, 0) 80%),
+    linear-gradient(315deg, hsla(355, 98%, 48%, 1) 100%, hsla(355, 98%, 48%, 0) 70%);
+  }
+
+.title {
+  margin-left: 600px;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  
+}
+
+main {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 9px;
+  max-width: 800px;
+  padding-top: 20px;
+}
+
+input {
+  width: 300px;
+  margin-left: 500px;
+  border-radius: 6px;
+}

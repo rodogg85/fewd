@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<script type="text/javascript" src="instafeed.min.js"></script>
+  <head>
+    <title>insta-search</title>
+
+    <link rel="stylesheet" href="stylesheets/insta-search.css" media="screen">
+
+  </head>
+
+  <body class="colorful">
+      <h1 class="title">insta-search</h1>
+      <form>
+        <input type="text" id='search' placeholder="Search hashtags (eg. Michael Jordan)">
+        <button>Search</button>
+      </form>
+    <main>
+          <div id="instafeed"></div>
+    </main>
+
+    <script>
+
+      var form = document.querySelector("form");
+      var input = form.querySelector("#search");
+      var instafeed = document.querySelector('#instafeed');
+
+
+    function loadPics() {
+      var feed = new Instafeed({
+      get: 'tagged',
+      tagName: input.value.replace(/\s+/g, ''),
+      clientId: 'f27d68ba6fb145bebbbc88ccc9ddb117'
+    });
+
+    feed.run();
+    }
+
+    function formSubmitted(event) {
+      event.preventDefault();
+      instafeed.innerHTML = "";
+      loadPics();
+    }
+
+    form.addEventListener("submit", formSubmitted);
+
+    </script>
+
+
+  </body>
+</html>
