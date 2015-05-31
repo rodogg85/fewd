@@ -12,10 +12,10 @@ body {
 
 .colorful {
   background:
-    linear-gradient(45deg, hsla(143, 97%, 46%, 1) 0%, hsla(143, 97%, 46%, 0) 70%),
-    linear-gradient(135deg, hsla(339, 96%, 42%, 1) 10%, hsla(339, 96%, 42%, 0) 80%),
-    linear-gradient(225deg, hsla(89, 96%, 45%, 1) 10%, hsla(89, 96%, 45%, 0) 80%),
-    linear-gradient(315deg, hsla(344, 92%, 44%, 1) 100%, hsla(344, 92%, 44%, 0) 70%);
+    linear-gradient(45deg, hsla(134, 43%, 73%, 1) 0%, hsla(134, 43%, 73%, 0) 70%),
+    linear-gradient(135deg, hsla(120, 95%, 94%, 1) 10%, hsla(120, 95%, 94%, 0) 80%),
+    linear-gradient(225deg, hsla(193, 95%, 82%, 1) 10%, hsla(193, 95%, 82%, 0) 80%),
+    linear-gradient(315deg, hsla(169, 79%, 29%, 1) 100%, hsla(169, 79%, 29%, 0) 70%);
   }
   
 .title {
